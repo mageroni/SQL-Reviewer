@@ -26,8 +26,8 @@ async function initializeCopilot() {
         console.error('⚠️  Falling back to rule-based analyzer');
         console.error('');
         console.error('To use AI-powered analysis:');
-        console.error('1. Install GitHub Copilot CLI: npm install -g @githubnext/github-copilot-cli');
-        console.error('2. Authenticate: github-copilot-cli auth');
+        console.error('1. Install GitHub Copilot SDK: npm install -g @github/copilot');
+        console.error('2. Authenticate: gh auth login');
         console.error('3. Restart the server');
         useFallback = true;
         return false;

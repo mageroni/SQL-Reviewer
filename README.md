@@ -16,7 +16,7 @@ A web application that analyzes SQL queries for efficiency and performance issue
 1. **Node.js** (v18 or higher)
 2. **GitHub Copilot CLI** - Install with:
    ```bash
-   npm install -g @githubnext/github-copilot-cli
+   npm install -g @github/copilot
    ```
 3. **GitHub Copilot subscription** - Required for using the Copilot SDK
 
@@ -33,9 +33,9 @@ A web application that analyzes SQL queries for efficiency and performance issue
    npm install
    ```
 
-3. Authenticate with GitHub Copilot CLI:
+3. Authenticate with GitHub CLI:
    ```bash
-   github-copilot-cli auth
+   gh auth login
    ```
 
 ## Usage
