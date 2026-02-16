@@ -9,7 +9,7 @@ const COPILOT_TIMEOUT = parseInt(process.env.COPILOT_TIMEOUT || '30000', 10); //
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.static('.'));
+app.use(express.static('public'));
 
 // Initialize Copilot client
 let copilotClient;
