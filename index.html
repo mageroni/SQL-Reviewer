@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Query Efficiency Reviewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <button class="burger-menu" id="burgerMenu">☰</button>
+            <h1>SQL Query Efficiency Reviewer</h1>
+            <button class="analyze-btn" id="analyzeBtn">Analyze Query</button>
+        </div>
+    </div>
+
+    <div class="burger-dropdown" id="burgerDropdown">
+        <h3>Sample Worst Practice Queries</h3>
+        <div class="query-option" data-query="select-star">
+            <strong>SELECT *</strong> - Fetching unnecessary columns
+        </div>
+        <div class="query-option" data-query="no-where">
+            <strong>Missing WHERE clause</strong> - Full table scan
+        </div>
+        <div class="query-option" data-query="function-column">
+            <strong>Function on indexed column</strong> - Index not used
+        </div>
+        <div class="query-option" data-query="implicit-conversion">
+            <strong>Implicit type conversion</strong> - Performance issue
+        </div>
+        <div class="query-option" data-query="or-conditions">
+            <strong>Multiple OR conditions</strong> - Poor optimization
+        </div>
+        <div class="query-option" data-query="subquery-select">
+            <strong>Subquery in SELECT</strong> - Repeated execution
+        </div>
+        <div class="query-option" data-query="not-in">
+            <strong>NOT IN with NULLs</strong> - Inefficient and buggy
+        </div>
+        <div class="query-option" data-query="like-wildcard">
+            <strong>Leading wildcard LIKE</strong> - Cannot use index
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="pane left-pane">
+            <div class="pane-header">SQL Query Input</div>
+            <textarea id="sqlInput" placeholder="Paste your SQL query here...&#10;&#10;Example:&#10;SELECT * FROM users WHERE YEAR(created_at) = 2024;"></textarea>
+        </div>
+        
+        <div class="pane right-pane">
+            <div class="pane-header">Efficiency Analysis</div>
+            <div id="output" class="output-content">
+                <div class="placeholder">
+                    <p>👈 Enter a SQL query on the left and click "Analyze Query" to see the efficiency score and recommendations.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
