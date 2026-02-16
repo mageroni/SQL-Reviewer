@@ -54,6 +54,13 @@ A web application that analyzes SQL queries for efficiency and performance issue
 
 4. Click "Analyze Query" to get AI-powered efficiency analysis
 
+## Configuration
+
+You can configure the application using environment variables:
+
+- `PORT` - Server port (default: 3000)
+- `COPILOT_TIMEOUT` - Timeout for Copilot SDK analysis in milliseconds (default: 30000)
+
 ## How It Works
 
 The application uses the GitHub Copilot SDK to analyze SQL queries for common performance issues:
@@ -75,7 +82,7 @@ Each query receives a score from 0-100, with detailed explanations and recommend
 
 - **Frontend**: HTML, CSS, JavaScript
 - **Backend**: Node.js + Express
-- **AI Engine**: GitHub Copilot SDK (GPT-4)
+- **AI Engine**: GitHub Copilot SDK (GPT-4o)
 - **Communication**: REST API
 
 ## Development

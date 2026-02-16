@@ -4,6 +4,7 @@ import { CopilotClient } from '@github/copilot-sdk';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const COPILOT_TIMEOUT = parseInt(process.env.COPILOT_TIMEOUT || '30000', 10); // 30 seconds default
 
 // Middleware
 app.use(cors());
@@ -278,7 +279,7 @@ Rate the query based on:
 Start with a score of 100 and deduct points for each issue found.`;
 
         // Send the prompt and wait for response
-        const response = await session.sendAndWait({ prompt }, 30000);
+        const response = await session.sendAndWait({ prompt }, COPILOT_TIMEOUT);
 
         if (!response || !response.data || !response.data.content) {
             throw new Error('No response from Copilot');
