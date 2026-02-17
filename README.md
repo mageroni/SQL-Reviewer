@@ -103,6 +103,14 @@ npm run dev
 
 - `GET /api/health` - Check server health
 
+## Other interesting projects using Copilot SDK
+- https://github.com/jamesmontemagno/hello-copilot-sdk-dotnet
+- https://github.com/jamesmontemagno/podcast-metadata-generator
+- https://github.com/chrisreddington/flight-school
+- https://github.com/patniko/github-copilot-browser
+- https://github.com/patniko/copilot-tasks
+- Many more, go start yours https://github.com/github/copilot-sdk
+
 ## License
 
 MIT
