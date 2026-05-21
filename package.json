@@ -5,8 +5,8 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node --watch server.js"
+    "start": "npx tsx server.js",
+    "dev": "npx tsx --watch server.js"
   },
   "keywords": [
     "sql",
@@ -18,8 +18,9 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@github/copilot-sdk": "^0.1.24",
+    "@github/copilot-sdk": "^0.1.32",
+    "cors": "^2.8.5",
     "express": "^4.18.2",
-    "cors": "^2.8.5"
+    "tsx": "^4.22.3"
   }
 }
